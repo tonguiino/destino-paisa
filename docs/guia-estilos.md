@@ -1,9 +1,9 @@
-# 🎨 Guía de Estilos — Destino Paisa
+# Guía de Estilos — Destino Paisa
 
 > Extraída de los mockups (`Documents/Personal/Proyecto_productivo/Mockups`) y de la
 > paleta oficial `colorimetria.png`. Este documento es la **única fuente de verdad**
-> para color, tipografía y componentes al desarrollar. Si un mockup contradice esta
-> guía, gana la guía.
+> para color, tipografía, componentes e iconografía al desarrollar. Si un mockup
+> contradice esta guía, gana la guía.
 
 ---
 
@@ -44,7 +44,7 @@ ink     100 #E9E4E7 · 200 #D0C4CB · 300 #A7959F · 400 #7C6672 · 500 #5C4551
 
 ★ = color oficial base. Los tonos 50–200 de `pine` sirven también como fondos tintados.
 
-### 1.4 ⛔ Reglas duras de color
+### 1.4 Reglas duras de color
 
 1. **Azul prohibido.** Los mockups antiguos usaban `#0072D4` en los botones
    "Reservar ahora" de Guatapé → **se reemplazan por `pine-800`**. Ningún azul en la UI.
@@ -127,11 +127,11 @@ Altura base 44–48px; padding horizontal 24–28px.
 
 ### 4.4 Header
 - Fondo transparente sobre `cream-100`/blanco. Wordmark "Destino Paisa" en `pine-800`
-  peso 700 (⚠️ los mockups dicen "RutaPaisa" — nombre obsoleto).
+  peso 700 (los mockups dicen "RutaPaisa" — nombre obsoleto).
 - Links de nav en `ink-800` 15px, hover `hunter-700`. Móvil: hamburguesa `pine-800`.
 
 ### 4.5 Checklist (Incluye / No incluye)
-- ✓ icono en `hunter-700` · ✗ icono en `paprika-500`. Texto `ink-800`.
+- Icono de check en `hunter-700` · icono de X en `paprika-500`. Texto `ink-800`.
 
 ### 4.6 Galería
 - Grid 2×2, gap 12–16px, imágenes radio 12px, `object-cover`.
@@ -232,7 +232,25 @@ Al reconstruir las pantallas, corregir:
 
 ---
 
-## 8. Trazabilidad de la extracción
+## 8. Iconografía
+
+- **Prohibido el uso de emojis del sistema** en la UI y en la documentación. Todo símbolo se representa con la librería de íconos.
+- **Librería candidata:** [Flaticon Uicons](https://www.flaticon.es/icon-fonts-mas-descargados?weight=regular&type=uicon) — peso **Regular**, estilo consistente, plan gratuito (verificar la atribución requerida al instalar).
+- **Estado:** sin instalar ni definir definitivamente. Mientras tanto, ninguna vista debe usar un emoji como ícono; el elemento va sin ícono y se anota como pendiente.
+- Al instalarla se documentará aquí: método (CDN o npm), clase de uso (`fi-rr-<nombre>` corresponde al peso Regular) y lista de íconos aprobados por vista.
+
+---
+
+## 9. Librería de componentes — beUI
+
+- Se adoptarán componentes de [beUI](https://beui.dev) cuando exista uno adecuado para la necesidad y el propietario lo apruebe. Biblioteca copy-paste para React/Next.js construida con Motion + Tailwind CSS 4 — **compatible con este stack** (React 19, Tailwind 4).
+- La instalación la realiza **el propietario** (vía CLI de shadcn, ej. `pnpm dlx shadcn add @beui/<componente>`). La IA puede sugerir qué componente instalar al construir una vista, nunca ejecutar la instalación.
+- El código queda copiado dentro del proyecto: si un componente de beUI contradice esta guía (colores, radios, botones), **gana esta guía** — se ajusta el componente copiado a los tokens.
+- Mientras beUI no esté instalado, construir los componentes con Tailwind según esta guía.
+
+---
+
+## 10. Trazabilidad de la extracción
 
 - Oficiales: leídos de las etiquetas de `colorimetria.png` (fuente de verdad).
 - `#EDF9EC` y `#0072D4`: muestreo de píxeles con Pillow sobre `home_desk.png` y `guatape_desk.png`.

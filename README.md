@@ -1,4 +1,4 @@
-# Destino Paisa 🏔️
+# Destino Paisa
 
 Plataforma que conecta viajeros con proveedores de experiencias turísticas:
 tours, transporte, hospedajes y actividades en Antioquia.
