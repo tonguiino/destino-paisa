@@ -32,7 +32,7 @@ export const GRUPOS_ENLACES_FOOTER: GrupoEnlacesFooter[] = [
     enlaces: [
       { texto: "Inicio", href: "/" },
       { texto: "Tours populares", href: "/#tours" },
-      { texto: "Transporte turístico", href: "/#transporte" },
+      { texto: "Transporte turístico", href: "/transporte" },
       { texto: "Blog", href: "/#blog" },
     ],
   },
