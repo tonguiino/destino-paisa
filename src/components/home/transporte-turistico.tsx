@@ -1,4 +1,5 @@
-import { PillButton } from "@/components/ui/pill";
+import { PillLink } from "@/components/ui/pill";
+import { enlaceWhatsapp } from "@/lib/contacto";
 
 export function TransporteTuristico() {
   return (
@@ -17,10 +18,17 @@ export function TransporteTuristico() {
           Solicita servicio de transporte para tus recorridos turísticos en
           Medellín y los municipios de Antioquia.
         </p>
-        {/* Pendiente: página de transporte para enlazar este botón */}
-        <PillButton type="button" variant="outline" className="mt-8">
+        <PillLink
+          variant="outline"
+          href={enlaceWhatsapp(
+            "Hola, quiero información sobre el servicio de transporte turístico",
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8"
+        >
           Más información
-        </PillButton>
+        </PillLink>
       </div>
     </section>
   );

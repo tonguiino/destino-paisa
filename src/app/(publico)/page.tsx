@@ -4,6 +4,7 @@ import { Hero } from "@/components/home/hero";
 import { ToursPopulares } from "@/components/home/tours-populares";
 import { TransporteTuristico } from "@/components/home/transporte-turistico";
 import { SeccionBlog } from "@/components/home/seccion-blog";
+import { BotonWhatsappFlotante } from "@/components/boton-whatsapp";
 
 export const metadata: Metadata = {
   title: "Destino Paisa | Descubre Antioquia",
@@ -22,6 +23,7 @@ export default async function Home() {
       <ToursPopulares />
       <TransporteTuristico />
       <SeccionBlog entries={entradas} />
+      <BotonWhatsappFlotante />
     </main>
   );
 }
