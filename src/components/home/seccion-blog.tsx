@@ -3,7 +3,11 @@ import type { BlogEntry } from "@/types/colombia";
 
 export function SeccionBlog({ entries }: { entries: BlogEntry[] }) {
   return (
-    <section aria-labelledby="blog-heading" className="bg-surface py-12 md:py-24">
+    <section
+      id="blog"
+      aria-labelledby="blog-heading"
+      className="bg-surface py-12 md:py-24"
+    >
       <div className="mx-auto w-full max-w-6xl px-4 md:px-6">
         <h2 id="blog-heading" className="text-2xl font-bold text-pine-800 md:text-4xl">
           Blog

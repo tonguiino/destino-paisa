@@ -4,6 +4,7 @@ import { enlaceWhatsapp } from "@/lib/contacto";
 export function TransporteTuristico() {
   return (
     <section
+      id="transporte"
       aria-labelledby="transporte-heading"
       className="bg-pine-50 py-12 md:py-24"
     >
