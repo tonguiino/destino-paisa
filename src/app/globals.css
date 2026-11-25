@@ -63,30 +63,36 @@
 
   /* Superficie de tarjetas (guía §1.2) */
   --color-surface: #ffffff;
-
-  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   color-scheme: light;
+  /* Fuente de la marca (guía §2). Referencia directa a la familia que
+     next/font emite en @font-face (nombre limpio, sin hash). No se usa
+     var(--font-poppins) porque Turbopack genera la clase .variable con un
+     nombre distinto al que renderiza en el <html>, y la variable queda
+     indefinida en producción. */
+  --font-sans: "Poppins", "Poppins Fallback", ui-sans-serif, system-ui, sans-serif;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  /* Tokens semánticos mapeados a la paleta de marca (guía §1) para que
+     los componentes shadcn/beUI hablen el idioma del proyecto */
+  --primary: var(--color-pine-800);
+  --primary-foreground: #ffffff;
+  --secondary: var(--color-pine-50);
+  --secondary-foreground: var(--color-pine-800);
+  --muted: var(--color-pine-50);
+  --muted-foreground: var(--color-ink-500);
+  --accent: var(--color-pine-50);
+  --accent-foreground: var(--color-pine-800);
+  --destructive: var(--color-paprika-500);
+  --border: var(--color-ink-100);
+  --input: var(--color-ink-100);
+  --ring: var(--color-hunter-300);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -145,8 +151,9 @@ body {
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
+  /* Radios de la guía §5: imágenes 12px, tarjetas 16px */
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 }

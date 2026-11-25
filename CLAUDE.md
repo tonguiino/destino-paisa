@@ -42,6 +42,14 @@ La IA puede ayudar únicamente redactando (nunca ejecutando, solo entregando el 
 
 En ambos casos: siempre en formato markdown, conservando el contexto de lo trabajado en la rama.
 
+### 1.5 Commit en cada entrega con cambios
+
+Toda respuesta del asistente que introduzca cambios en el proyecto debe
+terminar con el **texto del commit** correspondiente, listo para copiar y en
+formato Conventional Commits (sección 2). El asistente nunca lo ejecuta: solo
+lo redacta, al igual que en la sección 1.2. Si la respuesta no modifica el
+proyecto (conversación, lectura de código, preguntas), no se incluye.
+
 ---
 
 ## 2. Formato de commits (Conventional Commits)
