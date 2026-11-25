@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LUGARES_IDS, LUGAR_POR_ID } from "@/data/lugares";
@@ -37,22 +38,55 @@ export async function generateMetadata({
   };
 }
 
-export default async function LugarPage({
+/**
+ * El id es dato de URL: se lee dentro de <Suspense> para que el App Shell
+ * (main con el botón flotante) se comparta entre todos los enlaces al
+ * detalle y solo el contenido dependiente del lugar haga streaming.
+ */
+export default function LugarPage({ params }: PageProps<"/lugares/[id]">) {
+  return (
+    <main>
+      <Suspense fallback={<LugarCargando />}>
+        <ContenidoLugar params={params} />
+      </Suspense>
+      <BotonWhatsappFlotante />
+    </main>
+  );
+}
+
+async function ContenidoLugar({
   params,
-}: PageProps<"/lugares/[id]">) {
+}: {
+  params: PageProps<"/lugares/[id]">["params"];
+}) {
   const { id } = await params;
   const lugar = await getLugarDetalle(Number(id));
   if (!lugar) notFound();
 
   return (
-    <main>
+    <>
       <EncabezadoLugar lugar={lugar} />
       <MosaicoImagenes imagenes={lugar.mosaic} />
       <ListaActividades actividades={lugar.actividades} />
       {lugar.festivales.length > 0 && <SeccionFestivales lugar={lugar} />}
       {lugar.platos.length > 0 && <SeccionPlatos lugar={lugar} />}
       <CtaVisita lugar={lugar} />
-      <BotonWhatsappFlotante />
-    </main>
+    </>
+  );
+}
+
+/** Esqueleto del encabezado: aproxima el layout final para evitar shift. */
+function LugarCargando() {
+  return (
+    <section aria-hidden="true" className="bg-surface py-12 md:py-16">
+      <div className="mx-auto w-full max-w-6xl px-4 md:px-6">
+        <div className="h-4 w-28 rounded bg-pine-50" />
+        <div className="mt-4 h-9 w-64 rounded bg-pine-50 md:h-12 md:w-96" />
+        <div className="mt-2 h-4 w-40 rounded bg-pine-50" />
+        <div className="mt-6 aspect-[16/9] w-full rounded-xl bg-pine-50 md:aspect-[21/9]" />
+        <div className="mt-6 h-4 w-full max-w-3xl rounded bg-pine-50" />
+        <div className="mt-2 h-4 w-full max-w-xl rounded bg-pine-50" />
+      </div>
+    </section>
   );
 }
