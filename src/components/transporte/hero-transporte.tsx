@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { PillLink } from "@/components/ui/pill";
 
 interface HeroTransporteProps {
@@ -14,8 +13,8 @@ interface HeroTransporteProps {
 
 /**
  * Hero del servicio de transporte, sobre foto con overlay (guía §4.3).
- * Espejo del hero de la home (components/home/hero.tsx), con un enlace de
- * retorno porque el sitio aún no tiene header.
+ * Espejo del hero de la home (components/home/hero.tsx). El retorno al
+ * inicio lo resuelve el navbar global, no este hero.
  */
 export function HeroTransporte({
   titulo,
@@ -29,12 +28,6 @@ export function HeroTransporte({
       aria-labelledby="transporte-hero-heading"
       className="relative isolate flex min-h-[520px] items-center justify-center overflow-hidden bg-pine-950"
     >
-      <Link
-        href="/"
-        className="absolute left-4 top-5 z-10 text-sm text-white/90 transition-colors hover:text-white md:left-6"
-      >
-        Volver al inicio
-      </Link>
       {imagen && (
         <Image
           src={imagen}

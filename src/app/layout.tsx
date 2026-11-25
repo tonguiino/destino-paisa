@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
+import { Navbar } from "@/components/navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,9 +32,24 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={cn("h-full", "antialiased", poppins.variable, "font-sans")}
     >
       <body className="min-h-full flex flex-col">
+        {/* Skip link: primer elemento focusable, accesible con Tab (a11y). */}
+        <a
+          href="#contenido"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded-full focus:bg-pine-800 focus:px-5 focus:py-2.5 focus:text-sm focus:text-white"
+        >
+          Saltar al contenido
+        </a>
+        <Navbar />
         {/* Sticky footer: el wrapper crece (flex-1) y empuja el footer al
-            fondo incluso en páginas cortas como /login. */}
-        <div className="flex flex-1 flex-col">{children}</div>
+            fondo incluso en páginas cortas como /login. El id "contenido"
+            es el destino del skip link; tabIndex={-1} permite enfocarlo. */}
+        <div
+          id="contenido"
+          tabIndex={-1}
+          className="flex flex-1 flex-col focus:outline-none"
+        >
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
