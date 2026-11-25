@@ -11,8 +11,15 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
+/** URL base para Open Graph; configurable por entorno al desplegar. */
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
 export const metadata: Metadata = {
-  title: "Destino Paisa",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Destino Paisa",
+    template: "%s | Destino Paisa",
+  },
   description:
     "Conecta viajeros con proveedores de tours, transporte y experiencias en Antioquia",
 };
