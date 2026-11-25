@@ -9,7 +9,7 @@ export type EnlaceFooter = {
   /** Texto visible del enlace, en español. */
   texto: string;
   /**
-   * Ruta interna ("/", "/#tours") o URL externa completa. En el componente:
+   * Ruta interna ("/", "/toures") o URL externa completa. En el componente:
    * las que empiezan por "/" van con next/link; las que empiezan por "http",
    * con <a> externo.
    */
@@ -31,7 +31,7 @@ export const GRUPOS_ENLACES_FOOTER: GrupoEnlacesFooter[] = [
     titulo: "Explorar",
     enlaces: [
       { texto: "Inicio", href: "/" },
-      { texto: "Tours populares", href: "/#tours" },
+      { texto: "Tours populares", href: "/toures" },
       { texto: "Transporte turístico", href: "/transporte" },
       { texto: "Blog", href: "/#blog" },
     ],

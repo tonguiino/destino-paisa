@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { URL_SITIO } from "@/lib/sitio";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
 
@@ -12,11 +13,8 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-/** URL base para Open Graph; configurable por entorno al desplegar. */
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(URL_SITIO),
   title: {
     default: "Destino Paisa",
     template: "%s | Destino Paisa",

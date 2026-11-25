@@ -10,7 +10,7 @@ export type EnlaceNav = {
   /** Texto visible del enlace, en español. */
   texto: string;
   /**
-   * Ruta interna ("/", "/#tours") o URL externa completa. En el componente:
+   * Ruta interna ("/", "/toures") o URL externa completa. En el componente:
    * las que empiezan por "/" van con next/link; las que empiezan por "http",
    * con <a> externo.
    */
@@ -18,13 +18,13 @@ export type EnlaceNav = {
 };
 
 /**
- * Enlaces provisionales del menú principal: Tours y Blog apuntan a las
- * secciones de la home (#tours, #blog) hasta que existan sus vistas propias;
- * entonces se sustituyen aquí, sin tocar el componente.
+ * Blog apunta a la sección de la home (#blog) hasta que exista su vista
+ * propia; entonces se sustituye aquí, sin tocar el componente. Tours ya
+ * tiene vista propia (/toures).
  */
 export const ENLACES_NAV: EnlaceNav[] = [
   { texto: "Inicio", href: "/" },
-  { texto: "Tours", href: "/#tours" },
+  { texto: "Tours", href: "/toures" },
   { texto: "Transporte", href: "/transporte" },
   { texto: "Blog", href: "/#blog" },
 ];
