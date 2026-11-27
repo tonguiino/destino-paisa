@@ -37,6 +37,12 @@ yarn-error.log*
 # vercel
 .vercel
 
+# mockups de diseño (solo locales, no se versionan)
+/docs/mockups/
+
+# fotos originales sin optimizar (respaldo local, no se versionan)
+/originales/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
