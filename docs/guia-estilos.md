@@ -126,8 +126,11 @@ Altura base 44–48px; padding horizontal 24–28px.
 - **Sobre fondo claro (móvil):** banda de foto, H1 en `pine-800` sobre `cream-100`.
 
 ### 4.4 Header
-- Fondo transparente sobre `cream-100`/blanco. Wordmark "Destino Paisa" en `pine-800`
-  peso 700 (los mockups dicen "RutaPaisa" — nombre obsoleto).
+- Fondo transparente sobre `cream-100`/blanco. Logotipo de marca en el enlace a
+  `/` (arte provisional: `public/images/logo-destino-paisa.png`, fondo
+  transparente, recortado a su contenido 1078×407). Alto 36px móvil / 44px
+  desktop, con `next/image` y `priority` (LCP de la home). El wordmark de texto
+  de los mockups ("RutaPaisa" — nombre obsoleto) queda reemplazado.
 - Links de nav en `ink-800` 15px, hover `hunter-700`. Móvil: hamburguesa `pine-800`.
 
 ### 4.5 Checklist (Incluye / No incluye)
@@ -235,9 +238,10 @@ Al reconstruir las pantallas, corregir:
 ## 8. Iconografía
 
 - **Prohibido el uso de emojis del sistema** en la UI y en la documentación. Todo símbolo se representa con la librería de íconos.
-- **Librería candidata:** [Flaticon Uicons](https://www.flaticon.es/icon-fonts-mas-descargados?weight=regular&type=uicon) — peso **Regular**, estilo consistente, plan gratuito (verificar la atribución requerida al instalar).
-- **Estado:** sin instalar ni definir definitivamente. Mientras tanto, ninguna vista debe usar un emoji como ícono; el elemento va sin ícono y se anota como pendiente.
-- Al instalarla se documentará aquí: método (CDN o npm), clase de uso (`fi-rr-<nombre>` corresponde al peso Regular) y lista de íconos aprobados por vista.
+- **Prohibido escribir SVG a mano** para íconos de interfaz: siempre vienen de la librería (decisión del propietario: los SVG artesanales no son buena práctica).
+- **Librería adoptada:** [lucide-react](https://lucide.dev) `^1.80.0` (ya en `package.json`; descarta la candidata anterior Flaticon Uicons). Import nombrado tree-shakeable: `import { Menu, X } from "lucide-react"`.
+- **Uso:** tamaño vía `className` (`h-4 w-4` UI compacta · `h-5 w-5` enlaces y listas · `h-6 w-6` botones alternadores); color heredado con `currentColor` (clases `text-*` de la paleta); trazo 2 por defecto. Lucide aplica `aria-hidden` automáticamente a los íconos decorativos; el texto accesible va en el elemento padre (ej. `sr-only` en el botón).
+- **Deuda de migración:** `src/components/ui/lista-checks.tsx` aún usa SVG manual (migrable a `Check` / `X` de lucide); `src/components/logos-marca.tsx` permanece como excepción (logos de terceros con marca propia, no íconos de UI).
 
 ---
 

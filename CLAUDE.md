@@ -24,8 +24,8 @@ Toda acción que edite información relevante de GitHub la realiza **exclusivame
 ### 1.3 Emojis — PROHIBIDOS
 
 - No usar emojis del sistema en **ningún artefacto**: UI, documentación (README, guías, este documento), mensajes de commit ni respuestas del asistente.
-- Todo símbolo visual se representa con la **librería de íconos** definida en [guia-estilos.md](docs/guia-estilos.md) (candidata: Flaticon Uicons, peso Regular, gratuita — aún sin instalar ni definir).
-- Mientras la librería no esté instalada, no usar un emoji como reemplazo: dejar el elemento sin ícono y anotarlo como pendiente.
+- Todo símbolo visual se representa con la **librería de íconos** definida en [guia-estilos.md](docs/guia-estilos.md) (adoptada: lucide-react, ya instalada). Prohibido escribir SVG a mano para íconos de UI.
+- No usar un emoji como reemplazo de un ícono: si lucide-react no tiene uno adecuado, dejar el elemento sin ícono y anotarlo como pendiente.
 
 ### 1.4 Componentes de UI — beUI
 
@@ -41,6 +41,14 @@ La IA puede ayudar únicamente redactando (nunca ejecutando, solo entregando el 
 2. **Descripciones de Pull Request** — en markdown, con la plantilla de la sección 3.
 
 En ambos casos: siempre en formato markdown, conservando el contexto de lo trabajado en la rama.
+
+### 1.5 Commit en cada entrega con cambios
+
+Toda respuesta del asistente que introduzca cambios en el proyecto debe
+terminar con el **texto del commit** correspondiente, listo para copiar y en
+formato Conventional Commits (sección 2). El asistente nunca lo ejecuta: solo
+lo redacta, al igual que en la sección 1.2. Si la respuesta no modifica el
+proyecto (conversación, lectura de código, preguntas), no se incluye.
 
 ---
 
