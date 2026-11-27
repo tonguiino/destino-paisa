@@ -141,7 +141,7 @@ Al redactar el "Cómo probar", la IA debe entregar una guía de comprobación qu
 ## 5. Contexto del proyecto
 
 - Plataforma que conecta viajeros con proveedores de experiencias turísticas en Antioquia.
-- Stack: Next.js 16 (App Router) + TypeScript, Tailwind CSS v4, Supabase (Auth con Google), despliegue en Railway.
+- Stack: Next.js 16 (App Router) + TypeScript, Tailwind CSS v4, Supabase (Auth con Google), despliegue en Vercel (plan Hobby, gratuito).
 - Gestor de paquetes: pnpm. Detalles y estructura en [README.md](README.md).
 - Convenciones visuales (color, tipografía, componentes, iconografía): [guia-estilos.md](docs/guia-estilos.md) es la única fuente de verdad.
 - Rutas privadas viven en `src/app/(privado)/` y quedan protegidas por el layout guard del grupo.

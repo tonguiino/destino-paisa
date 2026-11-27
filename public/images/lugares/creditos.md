@@ -20,5 +20,5 @@ términos de cada licencia (las CC BY-SA son share-alike).
 | `museo-el-castillo/vista-2.jpg` | [File:Museo El Castillo Medellín 2.JPG](https://commons.wikimedia.org/wiki/File:Museo_El_Castillo_Medell%C3%ADn_2.JPG) | Weimargomez | CC BY-SA 4.0 |
 | `../hero-medellin.jpg` (raíz de /images) | [File:Valley of Medellín - skyline.jpg](https://commons.wikimedia.org/wiki/File:Valley_of_Medell%C3%ADn-_skyline.jpg) | — | Dominio público |
 
-Las fotografías de `guatape/` vigentes desde el 27 de noviembre de 2026 son
-material propio del propietario y no requieren atribución.
+Las fotografías de `guatape/` y `medellin/` vigentes desde el 27 de noviembre
+de 2026 son material propio del propietario y no requieren atribución.
