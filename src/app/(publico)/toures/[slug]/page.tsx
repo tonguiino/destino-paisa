@@ -8,6 +8,7 @@ import { IncluyeTour } from "@/components/toures/incluye-tour";
 import { GaleriaInformacionTour } from "@/components/toures/galeria-informacion-tour";
 import { JsonLdTour } from "@/components/toures/json-ld-tour";
 import { BotonWhatsappFlotante } from "@/components/boton-whatsapp";
+import { TextShimmer } from "@/components/motion/text-shimmer";
 
 /**
  * Solo los slugs de la curaduría se prerenderizan: el catálogo de tours es
@@ -81,7 +82,10 @@ function TourCargando() {
   return (
     <section aria-hidden="true" className="bg-pine-950">
       <div className="mx-auto flex min-h-[520px] max-w-2xl flex-col items-center justify-center px-4 py-16 text-center">
-        <div className="h-10 w-72 rounded bg-white/10 md:h-14 md:w-96" />
+        <TextShimmer className="text-sm font-medium [--foreground:#ffffff] [--muted-foreground:rgba(255,255,255,0.35)]">
+          Cargando tour
+        </TextShimmer>
+        <div className="mt-6 h-10 w-72 rounded bg-white/10 md:h-14 md:w-96" />
         <div className="mt-4 h-4 w-full max-w-md rounded bg-white/10" />
         <div className="mt-6 h-4 w-52 rounded bg-white/10" />
         <div className="mt-8 h-12 w-44 rounded-full bg-white/10" />

@@ -1,22 +1,15 @@
 import { PillLink } from "@/components/ui/pill";
-import { ImagenLugar } from "@/components/ui/imagen-lugar";
+import { GaleriaLightbox } from "@/components/ui/galeria-lightbox";
 import { enlaceWhatsapp } from "@/lib/contacto";
-import type { ImagenMosaico } from "@/types/colombia";
 import type { Tour } from "@/data/tours";
 import { precioLegible } from "./precio";
 
-/** El mosaico siempre se compone de 4 slots (guía §4.6). */
-const GALERIA_SLOTS = 4;
-
 /**
  * Bloque inferior del detalle de tour (mockup guatape_desk.png): galería
- * 2×2 a la izquierda y "Información adicional" con el CTA de reserva a la
- * derecha.
+ * 2×2 con visor a la izquierda y "Información adicional" con el CTA de
+ * reserva a la derecha.
  */
 export function GaleriaInformacionTour({ tour }: { tour: Tour }) {
-  const slots: ImagenMosaico[] = [...tour.galeria];
-  while (slots.length < GALERIA_SLOTS) slots.push({ src: null, alt: "" });
-
   const filas: [string, string][] = [
     ["Dificultad", tour.dificultad],
     ["Edad mínima", tour.edadMinima],
@@ -39,15 +32,12 @@ export function GaleriaInformacionTour({ tour }: { tour: Tour }) {
             >
               Galería
             </h2>
-            <div className="mt-6 grid grid-cols-2 gap-3 md:gap-4">
-              {slots.map((imagen, index) => (
-                <ImagenLugar
-                  key={imagen.src ?? `placeholder-${index}`}
-                  src={imagen.src}
-                  alt={imagen.alt}
-                  aspect="aspect-square"
-                />
-              ))}
+            <div className="mt-6">
+              <GaleriaLightbox
+                slots={tour.galeria}
+                contexto={`tour-${tour.slug}`}
+                label="Galería del tour"
+              />
             </div>
           </div>
           <div>

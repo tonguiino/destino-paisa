@@ -1,3 +1,4 @@
+import { TabsOpciones } from "@/components/ui/tabs-opciones";
 import type { OpcionContratacion } from "@/data/transporte";
 
 interface OpcionesContratacionProps {
@@ -7,12 +8,10 @@ interface OpcionesContratacionProps {
 }
 
 /**
- * Opciones de contratación: tarjetas blancas sobre pine-50 (guía §4.1/§4.2),
- * sin botón por tarjeta: la conversión se resuelve con los CTAs de WhatsApp
- * de las demás secciones.
- *
- * Pendiente: íconos decorativos por tarjeta (en el mockup: ubicación, reloj y
- * calendario) cuando se instale la librería de íconos (guía §8).
+ * Opciones de contratación como pestañas de beUI sobre pine-50 (guía
+ * §4.1/§4.2): el tablist muestra los tres títulos siempre visibles y el
+ * panel activo renderiza la tarjeta de la marca. Sin botón por opción: la
+ * conversión se resuelve con los CTAs de WhatsApp de las demás secciones.
  */
 export function OpcionesContratacion({
   heading,
@@ -34,20 +33,8 @@ export function OpcionesContratacion({
         <p className="mx-auto mt-4 max-w-2xl text-center text-base leading-relaxed text-ink-800">
           {bajada}
         </p>
-        <div className="mt-10 grid gap-6 md:mt-12 md:grid-cols-3">
-          {items.map((opcion) => (
-            <article
-              key={opcion.id}
-              className="rounded-2xl bg-surface p-6 shadow-sm transition-shadow hover:shadow-md"
-            >
-              <h3 className="text-lg font-semibold text-ink-800 md:text-xl">
-                {opcion.titulo}
-              </h3>
-              <p className="mt-3 text-base leading-relaxed text-ink-800">
-                {opcion.descripcion}
-              </p>
-            </article>
-          ))}
+        <div className="mt-10 md:mt-12">
+          <TabsOpciones items={items} />
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TituloHero } from "@/components/ui/titulo-hero";
 import { PillLink } from "@/components/ui/pill";
 
 interface HeroTouresProps {
@@ -42,12 +43,7 @@ export function HeroToures({
       {/* Overlay para contraste del texto (guía §4.3) */}
       <div className="absolute inset-0 bg-pine-950/50" aria-hidden />
       <div className="relative z-10 mx-auto max-w-2xl px-4 py-16 text-center">
-        <h1
-          id="toures-hero-heading"
-          className="text-3xl font-bold text-white md:text-5xl lg:text-[56px] lg:leading-[1.1]"
-        >
-          {titulo}
-        </h1>
+        <TituloHero id="toures-hero-heading" texto={titulo} />
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
           {subtitulo}
         </p>

@@ -1,12 +1,18 @@
-import { ImagenLugar } from "@/components/ui/imagen-lugar";
+import { GaleriaLightbox } from "@/components/ui/galeria-lightbox";
 import type { ImagenMosaico } from "@/types/colombia";
 
+interface MosaicoImagenesProps {
+  imagenes: ImagenMosaico[];
+  /** Id del lugar: prefijo de los ids del visor para no colisionar con otras galerías. */
+  lugarId: number;
+}
+
 /**
- * Mosaico 2×2 del lugar (guía §4.6: grid 2×2, gap 12–16px, radio 12px).
- * Siempre recibe 4 slots: los sin foto propia renderizan el tile
+ * Mosaico 2×2 del lugar (guía §4.6: grid 2×2, gap 12–16px, radio 12px) con
+ * visor morphing de beUI. Los slots sin foto renderizan el tile
  * "Foto próximamente" hasta que el propietario sume sus fotografías.
  */
-export function MosaicoImagenes({ imagenes }: { imagenes: ImagenMosaico[] }) {
+export function MosaicoImagenes({ imagenes, lugarId }: MosaicoImagenesProps) {
   return (
     <section
       aria-labelledby="mosaico-heading"
@@ -19,15 +25,12 @@ export function MosaicoImagenes({ imagenes }: { imagenes: ImagenMosaico[] }) {
         >
           Galería
         </h2>
-        <div className="mt-8 grid grid-cols-2 gap-3 md:mt-12 md:gap-4">
-          {imagenes.map((imagen, index) => (
-            <ImagenLugar
-              key={imagen.src ?? `placeholder-${index}`}
-              src={imagen.src}
-              alt={imagen.alt}
-              aspect="aspect-square"
-            />
-          ))}
+        <div className="mt-8 md:mt-12">
+          <GaleriaLightbox
+            slots={imagenes}
+            contexto={`lugar-${lugarId}`}
+            label="Galería del lugar"
+          />
         </div>
       </div>
     </section>

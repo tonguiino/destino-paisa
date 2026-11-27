@@ -66,7 +66,7 @@ async function ContenidoLugar({
   return (
     <>
       <EncabezadoLugar lugar={lugar} />
-      <MosaicoImagenes imagenes={lugar.mosaic} />
+      <MosaicoImagenes imagenes={lugar.mosaic} lugarId={lugar.id} />
       <ListaActividades actividades={lugar.actividades} />
       {lugar.festivales.length > 0 && <SeccionFestivales lugar={lugar} />}
       {lugar.platos.length > 0 && <SeccionPlatos lugar={lugar} />}

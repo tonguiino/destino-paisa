@@ -1,5 +1,9 @@
 import Image from "next/image";
+import { ChromaticTextReveal } from "@/components/motion/chromatic-text-reveal";
+import { EstadisticasHero } from "@/components/home/estadisticas-hero";
+import { TituloHero } from "@/components/ui/titulo-hero";
 import { PillLink } from "@/components/ui/pill";
+import { TOURS } from "@/data/tours";
 import type { AntioquiaSummary } from "@/types/colombia";
 
 /**
@@ -10,13 +14,17 @@ import type { AntioquiaSummary } from "@/types/colombia";
  */
 const HERO_IMAGE = "/images/hero-medellin.jpg";
 
-const formato = new Intl.NumberFormat("es-CO");
+/** Destinos de la curaduría actual; se mantiene sincrónico con los datos. */
+const DESTINOS = [...new Set(TOURS.map((tour) => tour.destino))];
+
+/**
+ * Paleta de la marca para el barrido cromático (guía §1, sin el arcoíris
+ * default de beUI): hunter-300, cream-100 y paprika-500 — el paprika es el
+ * único acento cálido de esta vista (§1.4).
+ */
+const PALETA_CROMATICA = ["#A5C993", "#FFF8E1", "#CF5C36"];
 
 export function Hero({ summary }: { summary: AntioquiaSummary | null }) {
-  const subtitle = summary
-    ? `${formato.format(summary.municipalities)} municipios, ${formato.format(summary.population)} habitantes y ${formato.format(summary.surface)} km² por descubrir.`
-    : "Tours, transporte turístico y experiencias en un solo lugar.";
-
   return (
     <section
       aria-labelledby="hero-heading"
@@ -36,14 +44,22 @@ export function Hero({ summary }: { summary: AntioquiaSummary | null }) {
       {/* Overlay para contraste del texto (guía §4.3) */}
       <div className="absolute inset-0 bg-pine-950/50" aria-hidden />
       <div className="relative z-10 mx-auto max-w-2xl px-4 py-16 text-center">
-        <h1
-          id="hero-heading"
-          className="text-3xl font-bold text-white md:text-5xl lg:text-[56px] lg:leading-[1.1]"
-        >
-          Descubre Antioquia
-        </h1>
+        {/* Kicker rotante de destinos: el H1 no rota para no debilitar SEO. */}
+        <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-white/80">
+          <ChromaticTextReveal
+            prefix="Tours a"
+            words={DESTINOS}
+            colors={PALETA_CROMATICA}
+            foregroundColor="#ffffff"
+          />
+        </p>
+        <TituloHero id="hero-heading" texto="Descubre Antioquia" />
         <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/90 md:text-lg">
-          {subtitle}
+          {summary ? (
+            <EstadisticasHero summary={summary} />
+          ) : (
+            "Tours, transporte turístico y experiencias en un solo lugar."
+          )}
         </p>
         <PillLink href="#tours" className="mt-8">
           Explora tours

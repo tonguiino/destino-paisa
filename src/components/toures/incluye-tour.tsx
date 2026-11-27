@@ -1,4 +1,4 @@
-import { ListaChecks } from "@/components/ui/lista-checks";
+import { AcordeonIncluye } from "@/components/ui/acordeon-incluye";
 
 interface IncluyeTourProps {
   incluye: string[];
@@ -6,9 +6,8 @@ interface IncluyeTourProps {
 }
 
 /**
- * "Incluye / No incluye" en dos columnas (guía §4.5 y mockup
- * guatape_desk.png): checks verdes hunter-700 y X paprika-500, el único
- * acento cálido de la vista.
+ * "Qué incluye el tour" como acordeón (guía §4.5): checks verdes hunter-700
+ * y X paprika-500, el único acento cálido de la vista.
  */
 export function IncluyeTour({ incluye, noIncluye }: IncluyeTourProps) {
   return (
@@ -23,19 +22,8 @@ export function IncluyeTour({ incluye, noIncluye }: IncluyeTourProps) {
         >
           Qué incluye el tour
         </h2>
-        <div className="mt-8 grid gap-10 md:mt-12 md:grid-cols-2">
-          <div>
-            <h3 className="text-xl font-semibold text-ink-800">Incluye</h3>
-            <div className="mt-4">
-              <ListaChecks items={incluye} />
-            </div>
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold text-ink-800">No incluye</h3>
-            <div className="mt-4">
-              <ListaChecks items={noIncluye} icono="x" />
-            </div>
-          </div>
+        <div className="mt-8 md:mt-12">
+          <AcordeonIncluye incluye={incluye} noIncluye={noIncluye} />
         </div>
       </div>
     </section>
