@@ -126,8 +126,11 @@ Altura base 44–48px; padding horizontal 24–28px.
 - **Sobre fondo claro (móvil):** banda de foto, H1 en `pine-800` sobre `cream-100`.
 
 ### 4.4 Header
-- Fondo transparente sobre `cream-100`/blanco. Wordmark "Destino Paisa" en `pine-800`
-  peso 700 (los mockups dicen "RutaPaisa" — nombre obsoleto).
+- Fondo transparente sobre `cream-100`/blanco. Logotipo de marca en el enlace a
+  `/` (arte provisional: `public/images/logo-destino-paisa.png`, fondo
+  transparente, recortado a su contenido 1078×407). Alto 36px móvil / 44px
+  desktop, con `next/image` y `priority` (LCP de la home). El wordmark de texto
+  de los mockups ("RutaPaisa" — nombre obsoleto) queda reemplazado.
 - Links de nav en `ink-800` 15px, hover `hunter-700`. Móvil: hamburguesa `pine-800`.
 
 ### 4.5 Checklist (Incluye / No incluye)

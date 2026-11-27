@@ -36,7 +36,7 @@ export const LUGARES: LugarCurado[] = [
       },
       {
         src: "/images/lugares/guatape/Sombrillas_guatape.jpg",
-        alt: "Calle de los Sombrillas en Guatapé: sombrillas de colores sobre el empedrado",
+        alt: "Calle de las Sombrillas en Guatapé, un rincón colorido y turístico para recorrer",
       },
     ],
     actividades: [

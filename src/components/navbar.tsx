@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { PillLink } from "@/components/ui/pill";
@@ -11,8 +12,8 @@ import { cn } from "@/lib/utils";
 
 /**
  * Navbar global del sitio (guía §4.4): fondo transparente sobre cream-100,
- * wordmark en pine-800 peso 700, links en ink-800 15px con hover hunter-700
- * y hamburguesa móvil pine-800.
+ * logotipo de marca en el enlace a inicio, links en ink-800 15px con hover
+ * hunter-700 y hamburguesa móvil pine-800.
  *
  * Cliente por necesidad: usa usePathname (enlace activo) y useState (menú
  * móvil). Montado en el layout raíz, aparece en todas las vistas, igual que
@@ -58,14 +59,21 @@ export function Navbar() {
         className="mx-auto w-full max-w-6xl px-4 md:px-6"
       >
         <div className="flex h-16 items-center justify-between md:h-20">
-          {/* Logo provisional. Pendiente: reemplazar por el logo definitivo
-              (<Image>) cuando exista; la guía §4.4 pide wordmark pine-800
-              peso 700. */}
+          {/* Logotipo de marca (guía §4.4): arte provisional recortado a su
+              contenido (1078×407). 36px de alto en móvil, 44px en desktop;
+              priority por ser el LCP de la home. */}
           <Link
             href="/"
-            className="text-lg font-bold text-pine-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hunter-300"
+            className="rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-hunter-300"
           >
-            Destino Paisa
+            <Image
+              src="/images/logo-destino-paisa.png"
+              alt="Destino Paisa"
+              width={1078}
+              height={407}
+              priority
+              className="h-9 w-auto md:h-11"
+            />
           </Link>
 
           {/* Enlaces desktop */}

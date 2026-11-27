@@ -70,24 +70,28 @@ export const TOURS: Tour[] = [
     recomendaciones: ["Bloqueador", "Ropa cómoda", "Hidratación"],
     clima: "Templado – cálido",
     incluye: [
-      "Transporte ida y regreso",
-      "Guía turístico certificado",
-      "Recorrido por Guatapé",
-      "Visita a la Piedra del Peñol",
-      "Seguro de viaje",
+      "Transporte puerta a puerta: pasamos por ti y te dejamos donde nos indiques",
+      "Acompañamiento de nuestro conductor, que conoce la ruta y te va contando lo mejor de cada lugar",
+      "Parada en la famosa Casa al Revés",
+      "Visita a la Réplica del Viejo Peñol",
+      "Parada en la Piedra del Peñol",
+      "Recorrido por Guatapé y tiempo libre en el Malecón",
     ],
     noIncluye: [
-      "Alimentación",
-      "Ingreso a la Piedra del Peñol (tiquete opcional, se paga en el lugar)",
+      "Entrada para subir a la Piedra del Peñol",
+      "Ingreso a la Casa al Revés",
+      "Alimentación y bebidas (desayuno, almuerzo o snacks en el camino)",
+      "Paseo en lancha o barco por la represa (si quieres hacerlo, te damos el tiempo libre para que lo tomes allá)",
+      "Gastos personales, recuerdos o actividades extra no mencionadas",
     ],
     galeria: [
       {
         src: "/images/lugares/guatape/piedra-vista-cerca.jpg",
-        alt: "Escalera en zigzag de la Piedra del Peñol vista desde la base",
+        alt: "Piedra del Peñol en Guatapé, un lugar atractivo y turístico para visitar",
       },
       {
         src: "/images/lugares/guatape/Sombrillas_guatape.jpg",
-        alt: "Calle de los Sombrillas en Guatapé: sombrillas de colores sobre el empedrado",
+        alt: "Calle de las Sombrillas en Guatapé, un rincón colorido y turístico para recorrer",
       },
       {
         src: "/images/lugares/guatape/tiendas_guatape.jpg",
@@ -102,7 +106,7 @@ export const TOURS: Tour[] = [
     heroAlt:
       "Vista panorámica del embalse de Peñol-Guatapé con el pueblo entre las montañas",
     precioDesde: null,
-    mensajeWhatsapp: "Hola, quiero reservar el Tour Guatapé y Piedra del Peñol",
+    mensajeWhatsapp: "Hola, quisiera reservar el Tour para Guatapé y Piedra del Peñol",
   },
   {
     slug: "comuna-13",
