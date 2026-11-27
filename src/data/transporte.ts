@@ -83,7 +83,7 @@ export const TRANSPORTE: ContenidoTransporte = {
       "Nuestro vehículo es un Chevrolet Sail LTZ con aire acondicionado: espacioso, con amplio espacio en la maleta, cómodo y seguro.",
       "Tu conductor cuenta con amplia experiencia en transporte y conoce las vías y los destinos de la región.",
     ],
-    imagen: null,
+    imagen: "/images/chevrolet_sail.jpeg",
     imagenAlt: "Chevrolet Sail LTZ del servicio de transporte",
     etiquetaImagen: "Foto del vehículo próximamente",
   },

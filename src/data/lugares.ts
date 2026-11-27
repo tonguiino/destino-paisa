@@ -23,12 +23,20 @@ export const LUGARES: LugarCurado[] = [
     cityId: 62,
     intro:
       "El pueblo de los zócalos a orillas del embalse: color, piedra y agua en uno de los destinos más visitados del oriente antioqueño.",
-    heroImage: "/images/lugares/guatape/vista-piedra.jpg",
-    heroAlt: "Panorámica del embalse de Guatapé vista desde la Piedra del Peñol",
+    heroImage: "/images/lugares/guatape/casa_zocalo.jpg",
+    heroAlt: "Fachada de Guatapé con zócalos coloridos frente a la calle empedrada",
     mosaico: [
       {
-        src: "/images/lugares/guatape/embalse-dron.jpg",
-        alt: "Embalse de Peñol-Guatapé con la Piedra del Peñol vista desde el aire",
+        src: "/images/lugares/guatape/piedra_lejos.jpg",
+        alt: "La Piedra del Peñol vista a lo lejos, entre las casas de Guatapé",
+      },
+      {
+        src: "/images/lugares/guatape/represa-aerea.jpg",
+        alt: "Vista aérea del embalse de Peñol-Guatapé entre nubes",
+      },
+      {
+        src: "/images/lugares/guatape/Sombrillas_guatape.jpg",
+        alt: "Calle de los Sombrillas en Guatapé: sombrillas de colores sobre el empedrado",
       },
     ],
     actividades: [

@@ -18,6 +18,7 @@ términos de cada licencia (las CC BY-SA son share-alike).
 | `parque-arvi/bosque.jpg` | [File:Bosque Parque Arví.JPG](https://commons.wikimedia.org/wiki/File:Bosque_Parque_Arv%C3%AD.JPG) | Paco Godoy | CC BY-SA 3.0 |
 | `museo-el-castillo/fachada.jpg` | [File:Museo El Castillo-Medellin.jpg](https://commons.wikimedia.org/wiki/File:Museo_El_Castillo-Medellin.jpg) | Luz V. | CC BY 2.0 |
 | `museo-el-castillo/vista-2.jpg` | [File:Museo El Castillo Medellín 2.JPG](https://commons.wikimedia.org/wiki/File:Museo_El_Castillo_Medell%C3%ADn_2.JPG) | Weimargomez | CC BY-SA 4.0 |
-| `guatape/vista-piedra.jpg` | [File:Vista desde la Piedra del Peñol, Guatapé, Antioquia, Colombia.jpg](https://commons.wikimedia.org/wiki/File:Vista_desde_la_Piedra_del_Pe%C3%B1ol,_Guatap%C3%A9,_Antioquia,_Colombia.jpg) | IdkSGM | CC BY-SA 4.0 |
-| `guatape/embalse-dron.jpg` | [File:Piedra y Embalse del Peñol desde dron 03.jpg](https://commons.wikimedia.org/wiki/File:Piedra_y_Embalse_del_Pe%C3%B1ol_desde_dron_03.jpg) | Juan Gómez | CC BY 2.0 |
 | `../hero-medellin.jpg` (raíz de /images) | [File:Valley of Medellín - skyline.jpg](https://commons.wikimedia.org/wiki/File:Valley_of_Medell%C3%ADn-_skyline.jpg) | — | Dominio público |
+
+Las fotografías de `guatape/` vigentes desde el 27 de noviembre de 2026 son
+material propio del propietario y no requieren atribución.

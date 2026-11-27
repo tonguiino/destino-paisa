@@ -82,18 +82,25 @@ export const TOURS: Tour[] = [
     ],
     galeria: [
       {
-        src: "/images/lugares/guatape/vista-piedra.jpg",
-        alt: "Panorámica del embalse de Guatapé vista desde la Piedra del Peñol",
+        src: "/images/lugares/guatape/piedra-vista-cerca.jpg",
+        alt: "Escalera en zigzag de la Piedra del Peñol vista desde la base",
       },
       {
-        src: "/images/lugares/guatape/embalse-dron.jpg",
-        alt: "Embalse de Peñol-Guatapé con la Piedra del Peñol vista desde el aire",
+        src: "/images/lugares/guatape/Sombrillas_guatape.jpg",
+        alt: "Calle de los Sombrillas en Guatapé: sombrillas de colores sobre el empedrado",
       },
-      { src: null, alt: "" },
-      { src: null, alt: "" },
+      {
+        src: "/images/lugares/guatape/tiendas_guatape.jpg",
+        alt: "Calle comercial de Guatapé con fachadas y zócalos de colores",
+      },
+      {
+        src: "/images/lugares/guatape/represa-aerea.jpg",
+        alt: "Vista aérea del embalse de Peñol-Guatapé entre nubes",
+      },
     ],
-    heroImage: "/images/lugares/guatape/vista-piedra.jpg",
-    heroAlt: "Panorámica del embalse de Guatapé vista desde la Piedra del Peñol",
+    heroImage: "/images/lugares/guatape/hero-tour-guatape.jpg",
+    heroAlt:
+      "Vista panorámica del embalse de Peñol-Guatapé con el pueblo entre las montañas",
     precioDesde: null,
     mensajeWhatsapp: "Hola, quiero reservar el Tour Guatapé y Piedra del Peñol",
   },

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import { PillButton, PillLink } from "@/components/ui/pill";
+import { PillLink } from "@/components/ui/pill";
 import { enlaceWhatsapp } from "@/lib/contacto";
 import { ENLACES_NAV, type EnlaceNav } from "@/lib/enlaces-nav";
 import { cn } from "@/lib/utils";
@@ -88,13 +88,11 @@ export function Navbar() {
             ))}
           </ul>
 
-          {/* Acciones desktop */}
+          {/* Acciones desktop. Pendiente: reincorporar el botón "Iniciar
+              sesión" (PillLink href="/login") cuando el login tenga flujo
+              activo; se ocultó porque un botón siempre deshabilitado
+              confunde al usuario (guía §3.1). */}
           <div className="hidden items-center gap-3 md:flex">
-            {/* Pendiente: activar cuando exista login (reemplazar por
-                PillLink href="/login"). Disabled con opacity-50, guía §3.1. */}
-            <PillButton variant="outline" disabled>
-              Iniciar sesión
-            </PillButton>
             <PillLink
               href={ENLACE_WHATSAPP}
               target="_blank"
@@ -161,9 +159,6 @@ export function Navbar() {
               >
                 Contacto
               </PillLink>
-              <PillButton variant="outline" disabled className="w-full">
-                Iniciar sesión
-              </PillButton>
             </div>
           </div>
         )}
