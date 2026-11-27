@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/lugares/guatape/represa-aerea.jpg",
+        url: "/images/lugares/guatape/casa_zocalo.jpg",
         alt: "Embalse de Peñol-Guatapé con la Piedra del Peñol vista desde el aire",
       },
     ],
@@ -37,7 +37,7 @@ export default function TouresPage() {
         subtitulo="Experiencias organizadas de principio a fin: transporte, guía y los destinos más emblemáticos saliendo desde Medellín."
         cta="Ver los tours"
         hrefCta="#catalogo-toures"
-        imagen="/images/lugares/guatape/represa-aerea.jpg"
+        imagen="/images/lugares/guatape/casa_zocalo.jpg"
       />
       <CatalogoToures tours={TOURS} />
       <CtaToures
