@@ -182,9 +182,26 @@ export const TOURS: Tour[] = [
       "Alimentación y bebidas (desayuno, almuerzo o snacks en el camino)",
       "Gastos personales, recuerdos o actividades extra no mencionadas",
     ],
-    galeria: [],
-    heroImage: null,
-    heroAlt: "",
+    galeria: [
+      {
+        src: "/images/lugares/santa-fe-antioquia/Santa-Fe-Main-Square.jpg",
+        alt: "Plaza principal de Santa Fe de Antioquia con su fuente central y la catedral blanca entre los árboles",
+      },
+      {
+        src: "/images/lugares/santa-fe-antioquia/santafe-parque.jpeg",
+        alt: "Fuente del parque principal de Santa Fe de Antioquia entre palmas y casonas coloniales",
+      },
+      {
+        src: "/images/lugares/santa-fe-antioquia/calle-santafe.jpeg",
+        alt: "Calle empedrada de Santa Fe de Antioquia con casonas coloniales de balcones",
+      },
+      {
+        src: "/images/lugares/santa-fe-antioquia/santafe-noche.jpeg",
+        alt: "Catedral de Santa Fe de Antioquia iluminada de noche, vista desde el parque principal",
+      },
+    ],
+    heroImage: "/images/lugares/santa-fe-antioquia/puente-de-occidente-3.jpg",
+    heroAlt: "Puente de Occidente colgando sobre el río Cauca en Santa Fe de Antioquia",
     precioDesde: null,
     mensajeWhatsapp: "Hola, quiero reservar el Tour a Santa Fe de Antioquia",
   },
