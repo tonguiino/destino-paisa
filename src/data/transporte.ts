@@ -10,6 +10,8 @@
  * muestra el tile "Foto próximamente".
  */
 
+import type { ImagenMosaico } from "@/types/colombia";
+
 export type OpcionContratacion = {
   /** Clave estable de la opción: "trayecto" | "horas" | "personalizado". */
   id: string;
@@ -49,6 +51,10 @@ export type ContenidoTransporte = {
     items: string[];
     cta: string;
     mensajeWhatsapp: string;
+    /** Mosaico 2×2 de destinos que conectamos (guía §4.6). */
+    mosaico: ImagenMosaico[];
+    /** Pie de foto del mosaico; también es el nombre accesible del visor. */
+    etiquetaMosaico: string;
   };
   traslados: {
     heading: string;
@@ -124,6 +130,25 @@ export const TRANSPORTE: ContenidoTransporte = {
     cta: "Solicitar tu trayecto",
     mensajeWhatsapp:
       "Hola, quiero solicitar un trayecto con el servicio de transporte turístico",
+    mosaico: [
+      {
+        src: "/images/lugares/parque-arvi/metrocable.jpg",
+        alt: "Metrocable del Parque Arví",
+      },
+      {
+        src: "/images/lugares/guatape/represa-aerea.jpg",
+        alt: "Represa de Guatapé",
+      },
+      {
+        src: "/images/lugares/comuna-13/comuna-13.jpg",
+        alt: "Comuna 13 de Medellín",
+      },
+      {
+        src: "/images/lugares/santa-fe-antioquia/puente-de-occidente-3.jpg",
+        alt: "Puente de Occidente, Santa Fe de Antioquia",
+      },
+    ],
+    etiquetaMosaico: "Destinos que conectamos por toda Antioquia",
   },
   traslados: {
     heading: "Traslados al aeropuerto",
