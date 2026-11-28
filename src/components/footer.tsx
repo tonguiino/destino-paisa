@@ -2,6 +2,7 @@ import Link from "next/link";
 import { cacheLife } from "next/cache";
 import { enlaceWhatsapp } from "@/lib/contacto";
 import { GRUPOS_ENLACES_FOOTER, REDES_SOCIALES } from "@/lib/enlaces-footer";
+import { BotonConfiguracionCookies } from "@/components/cookies/boton-configuracion-cookies";
 import {
   LogoFacebook,
   LogoInstagram,
@@ -71,10 +72,18 @@ export async function Footer() {
               </h3>
               <ul className="mt-4 space-y-3">
                 {grupo.enlaces.map((enlace) => (
-                  <li key={enlace.href}>
-                    <Link href={enlace.href} className={CLASES_ENLACE}>
-                      {enlace.texto}
-                    </Link>
+                  <li key={enlace.href ?? enlace.texto}>
+                    {enlace.abrePreferenciasCookies ? (
+                      <BotonConfiguracionCookies
+                        texto={enlace.texto}
+                        apariencia="enlace"
+                        className={CLASES_ENLACE}
+                      />
+                    ) : (
+                      <Link href={enlace.href!} className={CLASES_ENLACE}>
+                        {enlace.texto}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>

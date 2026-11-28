@@ -20,5 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ruta("/transporte", 0.8),
     ...TOURS_SLUGS.map((slug) => ruta(`/toures/${slug}`, 0.7)),
     ...LUGARES_IDS.map((id) => ruta(`/lugares/${id}`, 0.6)),
+    // Documentos legales: indexables, con prioridad baja.
+    ruta("/terminos", 0.3),
+    ruta("/politica-de-privacidad", 0.3),
+    ruta("/cookies", 0.3),
   ];
 }

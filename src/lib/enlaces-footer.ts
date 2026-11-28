@@ -13,12 +13,12 @@ export type EnlaceFooter = {
    * las que empiezan por "/" van con next/link; las que empiezan por "http",
    * con <a> externo.
    */
-  href: string;
+  href?: string;
   /**
-   * El destino aún no existe (dará 404). No se renderiza: sirve de
-   * documentación para saber qué hay que crear antes de lanzar.
+   * Sin href: abre el panel de preferencias del banner de cookies
+   * (BotonConfiguracionCookies, componente de cliente).
    */
-  pendiente?: boolean;
+  abrePreferenciasCookies?: boolean;
 };
 
 export type GrupoEnlacesFooter = {
@@ -39,12 +39,10 @@ export const GRUPOS_ENLACES_FOOTER: GrupoEnlacesFooter[] = [
   {
     titulo: "Legal",
     enlaces: [
-      { texto: "Términos y condiciones", href: "/terminos", pendiente: true },
-      {
-        texto: "Política de privacidad",
-        href: "/politica-de-privacidad",
-        pendiente: true,
-      },
+      { texto: "Términos y condiciones", href: "/terminos" },
+      { texto: "Política de privacidad", href: "/politica-de-privacidad" },
+      { texto: "Política de cookies", href: "/cookies" },
+      { texto: "Configuración de cookies", abrePreferenciasCookies: true },
     ],
   },
 ];

@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { URL_SITIO } from "@/lib/sitio";
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar";
+import { BannerCookies } from "@/components/cookies/banner-cookies";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -49,6 +50,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           {children}
         </div>
         <Footer />
+        {/* Hijo directo de <body> (después del footer): useModalScope
+            inertiza a los hermanos de este root cuando abre el panel de
+            preferencias. Server-renderiza null: el aviso solo aparece en
+            cliente si el usuario aún no decide sobre cookies. */}
+        <BannerCookies />
       </body>
     </html>
   );
