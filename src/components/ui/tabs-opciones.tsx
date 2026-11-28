@@ -30,7 +30,12 @@ interface TabsOpcionesProps {
 export function TabsOpciones({ items }: TabsOpcionesProps) {
   return (
     <Tabs defaultValue={items[0]?.id} labels={LABELS_TABS}>
-      <TabsList wrapperClassName="justify-center">
+      {/* Centrado del tablist: wrapperClassName no sirve aquí porque el
+          viewport interno del TabsList es w-full (centrar el root no mueve
+          nada). mx-auto sobre el tablist sí lo centra, y al desbordar en
+          móvil los márgenes auto colapsan a 0: queda alineado a la
+          izquierda y el scroll con flechas sigue funcionando igual. */}
+      <TabsList className="mx-auto flex">
         {items.map((item) => {
           const Icono = ICONOS[item.id];
           return (

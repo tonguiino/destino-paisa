@@ -116,12 +116,21 @@ export const LUGARES: LugarCurado[] = [
     cityId: 125,
     intro:
       "La ciudad patrimonio del Occidente: calles empedradas, casonas coloniales y el río Cauca frente a frente con el Puente de Occidente.",
-    heroImage: "/images/lugares/santa-fe-antioquia/puente-de-occidente.jpg",
-    heroAlt: "Puente de Occidente colgando sobre el río Cauca en Santa Fe de Antioquia",
+    heroImage: "/images/lugares/santa-fe-antioquia/Santa-Fe-Main-Square.jpg",
+    heroAlt:
+      "Plaza principal de Santa Fe de Antioquia con su fuente central y la catedral blanca entre los árboles",
     mosaico: [
       {
-        src: "/images/lugares/santa-fe-antioquia/puente-de-occidente-2.jpg",
+        src: "/images/lugares/santa-fe-antioquia/santafe-parque.jpeg",
+        alt: "Fuente del parque principal de Santa Fe de Antioquia entre palmas y casonas coloniales",
+      },
+      {
+        src: "/images/lugares/santa-fe-antioquia/puente-de-occidente-3.jpg",
         alt: "Torres y tablas del Puente de Occidente sobre el río Cauca",
+      },
+      {
+        src: "/images/lugares/santa-fe-antioquia/calle-santafe.jpeg",
+        alt: "Calle empedrada de Santa Fe de Antioquia con casonas coloniales de balcones",
       },
     ],
     actividades: [

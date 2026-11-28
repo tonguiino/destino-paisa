@@ -9,12 +9,12 @@ import { BotonWhatsappFlotante } from "@/components/boton-whatsapp";
 export const metadata: Metadata = {
   title: "Tours en Antioquia",
   description:
-    "Tours saliendo desde Medellín: Guatapé y la Piedra del Peñol, Comuna 13, noches de discotecas y más experiencias acompañadas por Antioquia.",
+    "Tours saliendo desde Medellín: Guatapé y la Piedra del Peñol, Comuna 13, Santa Fe de Antioquia y más experiencias acompañadas por Antioquia.",
   alternates: { canonical: "/toures" },
   openGraph: {
     title: "Tours en Antioquia",
     description:
-      "Tours saliendo desde Medellín: Guatapé y la Piedra del Peñol, Comuna 13, noches de discotecas y más experiencias acompañadas por Antioquia.",
+      "Tours saliendo desde Medellín: Guatapé y la Piedra del Peñol, Comuna 13, Santa Fe de Antioquia y más experiencias acompañadas por Antioquia.",
     type: "website",
     images: [
       {

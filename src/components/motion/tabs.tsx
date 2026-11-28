@@ -577,7 +577,7 @@ export function TabsTrigger({
           if (!event.defaultPrevented) setValue(value);
         }}
         className={cn(
-          "relative isolate px-3 pb-2.5 pt-1 -mb-px text-sm font-medium transition-colors min-h-[44px] inline-flex items-center whitespace-nowrap shrink-0",
+          "relative isolate cursor-pointer px-3 pb-2.5 pt-1 -mb-px text-sm font-medium transition-colors min-h-[44px] inline-flex items-center whitespace-nowrap shrink-0",
           active ? "text-foreground" : "text-muted-foreground hover:text-foreground",
           className,
         )}
@@ -637,7 +637,7 @@ export function TabsTrigger({
           if (!event.defaultPrevented) setValue(value);
         }}
         className={cn(
-          "relative z-10 inline-flex items-center justify-center whitespace-nowrap bg-transparent px-3.5 py-1.5 text-sm font-medium outline-none",
+          "relative z-10 inline-flex cursor-pointer items-center justify-center whitespace-nowrap bg-transparent px-3.5 py-1.5 text-sm font-medium outline-none",
           "text-muted-foreground hover:text-foreground rounded-full",
           className,
         )}

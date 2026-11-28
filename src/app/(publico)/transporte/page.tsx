@@ -50,6 +50,8 @@ export default function TransportePage() {
         items={beneficios.items}
         cta={beneficios.cta}
         hrefCta={enlaceWhatsapp(beneficios.mensajeWhatsapp)}
+        mosaico={beneficios.mosaico}
+        etiquetaMosaico={beneficios.etiquetaMosaico}
       />
       <TrasladosAeropuerto
         heading={traslados.heading}

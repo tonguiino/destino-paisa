@@ -7,12 +7,11 @@ import { TOURS } from "@/data/tours";
 import type { AntioquiaSummary } from "@/types/colombia";
 
 /**
- * Foto de fondo: "Valley of Medellín - skyline" — dominio público.
- * Fuente: https://commons.wikimedia.org/wiki/File:Valley_of_Medell%C3%ADn-_skyline.jpg
- * El propietario puede reemplazar el archivo public/images/hero-medellin.jpg
- * por una foto propia sin cambiar código.
+ * Foto de fondo: panorama aéreo propio de Medellín — material del
+ * propietario, sin atribución (ver public/images/lugares/creditos.md).
+ * Para cambiarla basta reemplazar el archivo apuntado por HERO_IMAGE.
  */
-const HERO_IMAGE = "/images/hero-medellin.jpg";
+const HERO_IMAGE = "/images/lugares/medellin/medellin-hero.jpg";
 
 /** Destinos de la curaduría actual; se mantiene sincrónico con los datos. */
 const DESTINOS = [...new Set(TOURS.map((tour) => tour.destino))];
